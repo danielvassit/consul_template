@@ -1,6 +1,3 @@
-# consul_template
-
-
 # Side Project: Service discovery with consul-template
 
 The gole of this project is to create simple POC that would show how service discovery and consul-templates work.
@@ -14,7 +11,7 @@ There is also haproxy vm that load balances traffic to app servers based on avai
 
 Virtualbox and Vagrant needs to be installed.
 
-```
+```s
 brew cask install virtualbox
 brew cask install vagrant
 ```
@@ -22,7 +19,7 @@ brew cask install vagrant
 # How to run lab
 
 Start vagrant 
-```
+```s
 vagrant up
 ```
 
@@ -30,11 +27,11 @@ In web browser go to localhost:8081, this should show first app. Try to reload t
 
 # Helpful commands
 Check all registered applications "app" in consul
-```
+```s
 dig @127.0.0.1 -p 8600 app.service.consul 
 ```
 
 Check all consul cluster members
-```
+```s
 consul members
 ```
