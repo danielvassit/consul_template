@@ -1,0 +1,12 @@
+{
+  "service": {
+    "name": "app",
+    "port": 80,
+    "checks": [
+      {
+        "script": "/bin/curl http://localhost:80",
+        "interval": "10s"
+      }
+    ]
+  }
+}

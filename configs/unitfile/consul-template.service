@@ -1,0 +1,13 @@
+[Unit]
+Description=consul-template
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+EnvironmentFile=-/etc/consul.d/consul
+Restart=on-failure
+ExecStart=/bin/consul-template -template "/etc/haproxy/haproxy.cfg.tpl:/etc/haproxy/haproxy.cfg:/bin/systemctl reload haproxy"
+KillSignal=SIGINT
+
+[Install]
+WantedBy=multi-user.target

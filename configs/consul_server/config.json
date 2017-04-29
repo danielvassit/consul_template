@@ -1,0 +1,10 @@
+{
+    "server": true,
+    "datacenter": "dc1",
+    "node_name": "consul",
+    "bootstrap_expect": 1,
+    "data_dir": "/var/consul",
+    "log_level": "INFO",
+    "bind_addr": "10.0.0.44",
+    "enable_syslog": true
+}
